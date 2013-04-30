@@ -19,6 +19,7 @@ public static class ConsolePrinter
             Console.WriteLine("Patient age : " + patient.Age);
             Console.WriteLine("Doc name : " + patient.DoctorName);
             Console.WriteLine("Patient diagnosis : " + patient.Diagnosis);
+            Console.WriteLine("-----------------------------------------");
         }
     }
 }

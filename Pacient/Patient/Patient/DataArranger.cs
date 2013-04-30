@@ -19,11 +19,10 @@ public class DataArranger
         ArrangeData();
     }
 
-    private DynamicList ArrangeData()
+    private void ArrangeData()
     {
         if (this.binFileToString != "")
-        {
-            DynamicList dataList = new DynamicList();
+        {          
             string[] patients = this.binFileToString.Split(new char[] { '.' });
 
             for (int i = 0; i < patients.Length; i++)
@@ -41,8 +40,6 @@ public class DataArranger
                 }
             }
         }
-
-        return this.ListOfPatients;
     }
 
     public void ArrangeDependingOnDoctorsName(string doctorsName)
@@ -58,9 +55,9 @@ public class DataArranger
             }
         }
 
-        //var ordered =
-        //doctorXPatient.OrderByDescending(x => x.Age);
-        foreach (var item in doctorXPatient)
+        var ordered =
+        doctorXPatient.OrderByDescending(x => x.Age);
+        foreach (var item in ordered)
         {
             result.Add(item);
         }

@@ -12,11 +12,12 @@ class Program
     static void Meniu()
     {
 
-        Console.WriteLine("For adding a new pasient press 1");
-        Console.WriteLine("For changing a pasient info press 2");
-        Console.WriteLine("For deleteing a pasient press 3");
-        Console.WriteLine("For getting all pasient of a doctor press 4");
-        Console.WriteLine("To see all pasients in age range press 5");
+        Console.WriteLine("1. For  adding a  new  pasient.");
+        Console.WriteLine("2. For changing a pasient info.");
+        Console.WriteLine("3. For   deleteing  a  pasient.");
+        Console.WriteLine("4. For getting all doctor's patients.");
+        Console.WriteLine("5. For all pasients in age range.");
+        Console.WriteLine("6. For EXIT.");
         int userChoise = 0;
         
         //DynamicList dinamicList = new DynamicList();
@@ -41,7 +42,8 @@ class Program
                     printByPatientAge();
                     break;
                 default:
-                    throw new ArgumentOutOfRangeException("Your command is not valid");
+                    Console.WriteLine("Press 6 for exit");
+                    break;
             }
         } while (userChoise != 6);
     }
